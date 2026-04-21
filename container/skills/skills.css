@@ -1,0 +1,137 @@
+/* Skills Section Styles - Scoped */
+.skills-module {
+    padding: 100px 0;
+    width: 100%;
+    background-color: #0b0c16;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.skills-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+@media (max-width: 1100px) {
+    .skills-container {
+        padding: 0 5%;
+    }
+}
+
+/* Header */
+.skills-header {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.skills-title {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.skills-subtitle {
+    font-size: 16px;
+    color: #a4a5b6;
+    font-weight: 500;
+}
+
+/* Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Individual Card */
+.skill-card {
+    position: relative;
+    background-color: #171825;
+    padding: 50px 30px;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(189, 109, 252, 0.2);
+}
+
+/* Purple Glow at top center of each card */
+.card-glow {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 100px;
+    background: radial-gradient(circle, rgba(189, 109, 252, 0.15) 0%, rgba(189, 109, 252, 0) 70%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Icon Diamond */
+.skill-icon-box {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 35px;
+    display: flex;
+    justify-content: center;
+}
+
+.skill-icon-diamond {
+    width: 50px;
+    height: 50px;
+    background-color: #1c1d2d;
+    transform: rotate(45deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.skill-icon-diamond i {
+    transform: rotate(-45deg);
+    font-size: 1.1rem;
+    color: #ffffff;
+}
+
+/* Card Content */
+.skill-card-title {
+    position: relative;
+    z-index: 1;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    color: #ffffff;
+}
+
+.skill-card-desc {
+    position: relative;
+    z-index: 1;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #8c8da3;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    .skills-title {
+        font-size: 28px;
+    }
+}
