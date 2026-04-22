@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="container/skills/skills.css">
     <link rel="stylesheet" href="container/portfolio/portfolio.css">
     <link rel="stylesheet" href="container/contact/contact.css">
+    <link rel="stylesheet" href="container/footer/footer.css">
 
     <style>
         * {
@@ -40,6 +41,7 @@
     <div id="skills-container"></div>
     <div id="portfolio-container"></div>
     <div id="contact-container"></div>
+    <div id="footer-container"></div>
 
     <script>
         async function loadComponents() {
@@ -49,7 +51,8 @@
                 { id: 'experience-container', url: 'container/experience/experience.html', script: 'container/experience/experience.js' },
                 { id: 'skills-container', url: 'container/skills/skills.html' },
                 { id: 'portfolio-container', url: 'container/portfolio/portfolio.html' },
-                { id: 'contact-container', url: 'container/contact/contact.html' }
+                { id: 'contact-container', url: 'container/contact/contact.html' },
+                { id: 'footer-container', url: 'container/footer/footer.html' }
             ];
 
             for (const comp of components) {
