@@ -22,15 +22,16 @@
 
 /* Header Area */
 .exp-header {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .exp-header h1 {
     font-size: 32px;
     font-weight: 700;
-    margin-bottom: 25px;
     color: #ffffff;
     letter-spacing: -0.5px;
+    line-height: 1.1;
+    margin-bottom: 5px;
 }
 
 .exp-header p {
@@ -38,6 +39,7 @@
     line-height: 1.7;
     color: #a4a5b6;
     max-width: 1100px;
+    margin-top: 0;
 }
 
 /* Two Column Layout */
@@ -117,7 +119,7 @@
 }
 
 /* Bottom Actions */
-.exp-footer {
+/* .exp-footer {
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     padding-top: 40px;
     display: flex;
@@ -148,13 +150,14 @@
 
 .arrow-icon {
     font-size: 16px;
-}
+} */
 
 /* Responsive Styles */
 @media (max-width: 1024px) {
     .exp-grid {
         flex-direction: column;
     }
+
     .image-container {
         max-width: 100%;
     }
@@ -165,6 +168,7 @@
         flex-direction: column;
         gap: 20px;
     }
+
     .pill-btn {
         width: 100%;
         justify-content: center;
