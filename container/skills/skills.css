@@ -138,10 +138,77 @@
     border-radius: 12px;
     padding: 12px 16px;
     transition: background-color 0.3s ease;
+    position: relative;
+    outline: none;
 }
 
 .skill-item:hover {
     background-color: #25263a;
+}
+
+.skill-item::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: 18px;
+    bottom: calc(100% + 10px);
+    max-width: min(340px, calc(100vw - 60px));
+    padding: 10px 12px;
+    border-radius: 12px;
+    background: rgba(17, 18, 29, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.92);
+    font-size: var(--fs-body-sm);
+    font-weight: 600;
+    line-height: 1.35;
+    letter-spacing: 0.2px;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(6px);
+    transition: opacity 140ms ease, transform 140ms ease, visibility 140ms ease;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.skill-item::after {
+    content: "";
+    position: absolute;
+    left: 34px;
+    bottom: calc(100% + 5px);
+    width: 10px;
+    height: 10px;
+    background: rgba(17, 18, 29, 0.92);
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    transform: rotate(45deg) translateY(6px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 140ms ease, transform 140ms ease, visibility 140ms ease;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.skill-item:hover::before,
+.skill-item:focus-visible::before,
+.skill-item:hover::after,
+.skill-item:focus-visible::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.skill-item:hover::before,
+.skill-item:focus-visible::before {
+    transform: translateY(0);
+}
+
+.skill-item:hover::after,
+.skill-item:focus-visible::after {
+    transform: rotate(45deg) translateY(0);
+}
+
+.skill-item:focus-visible {
+    border-color: rgba(176, 75, 243, 0.35);
+    box-shadow: 0 0 0 4px rgba(176, 75, 243, 0.12);
 }
 
 .skill-item i {

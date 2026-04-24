@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,11 @@
     <!-- Modern Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Montserrat:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
+
     <!-- Component CSS -->
     <link rel="stylesheet" href="container/header/header.css">
     <link rel="stylesheet" href="container/hero/hero.css">
@@ -38,6 +41,7 @@
             box-sizing: border-box;
             font-family: 'Outfit', sans-serif;
         }
+
         body {
             background-color: #0b0c16;
             color: #ffffff;
@@ -46,21 +50,35 @@
         }
 
         /* Custom Cursor */
-        body, a, button, input, textarea, select, .skill-card, .skill-item, .nav-item, .btn-header, .social-icon {
+        body,
+        a,
+        button,
+        input,
+        textarea,
+        select,
+        .skill-card,
+        .skill-item,
+        .nav-item,
+        .btn-header,
+        .social-icon {
             cursor: none !important;
         }
+
         .cursor-dot {
             width: 8px;
             height: 8px;
             background-color: #b057d5;
         }
+
         .cursor-outline {
             width: 40px;
             height: 40px;
             border: 2px solid rgba(176, 87, 213, 0.5);
             transition: left 0.15s ease-out, top 0.15s ease-out;
         }
-        .cursor-dot, .cursor-outline {
+
+        .cursor-dot,
+        .cursor-outline {
             position: fixed;
             top: 50%;
             left: 50%;
@@ -71,6 +89,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Custom Cursor -->
     <div class="cursor-dot"></div>
@@ -103,7 +122,7 @@
                     if (response.ok) {
                         const html = await response.text();
                         document.getElementById(comp.id).innerHTML = html;
-                        
+
                         // Load component script if exists
                         if (comp.script) {
                             const script = document.createElement('script');
@@ -135,4 +154,5 @@
         });
     </script>
 </body>
+
 </html>
